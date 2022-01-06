@@ -7,7 +7,7 @@ import action.BaseAction;
 import dao.UserDao;
 import entity.User;
 
-
+//第一次使用分支
 public class LoginAction extends BaseAction{
 	private String username;
 	private String password;
