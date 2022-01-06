@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>	
+	<include file="struts-a1.xml"/>
+	<include file="struts-a2.xml"/>
+	<include file="struts-a3.xml"/>
+	<include file="struts-a4.xml"/>
+	<include file="struts-a5.xml"/>
+	
+    <package name="employee-default" extends="json-default">
+		<!-- 判断用户名密码是否正确-->
+		<action name="login" class="action.a0.LoginAction">
+			<result name="username_error">/login.jsp</result>
+			<result name="password_error">/login.jsp</result>
+			<result name="success1">/index.html</result>
+			<result name="success2">/index2.html</result>
+			<result name="success3">/index3.html</result>
+			<result name="success4">/index4.html</result>
+			<result name="success5">/index5.html</result>
+		</action>
+    </package>
+</struts>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="a4" namespace="/" extends="employee-default">
+	
+		<action name="findAttendence" class="action.a4.FindAt" method="showlist1">
+			 <param name="pageSize">20</param> 
+			<result name="success">/a4/showAttendence.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="yejikaohe" class="action.a4.SalaryListAction"  method="showlistDY">
+			<param name="pageSize">50</param>
+			<result name="success">/a4/attendenceSet.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="salary" class="action.a4.SalaryAction">
+			<result name="success">/a4/xiugaiYeji.jsp</result>
+			<result name="delete">/a4/xiugaiSuccess.jsp</result>
+			<result name="save">/a4/xiugaiSuccess.jsp</result>
+			<result name="update">/a4/xiugaiSuccess.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		 
+		
+		<action name="attendence" class="action.a4.AttendenceAction">
+			<result name="add">/a4/xiugaiSuccess.jsp</result>
+			<result name="delete">/a4/xiugaiSuccess.jsp</result>
+			<result name="update">/a4/xiugaiAttendence.jsp</result>
+			 <result name="list" >/a4/xiugaiSuccess.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		
+		<action name="attendenceSet" class="action.a4.AttendenceSetAction">
+			<result name="message">/a4/attendenceSet.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		
+		<action name="kaohe" class="action.a4.AttendenceListAction">
+			<result name="success">/a4/kaohe.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+	</package>
+</struts>
+
+	

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+	<package name="a1" extends="employee-default">
+	
+		<action name="employeeInf" class="action.a1.EmpListAction" method="showlist">
+			<result name="success">/a1/employeeInf.jsp</result>			
+			<result name="error">../error.jsp</result> 
+		</action>
+		
+		<action name="deptInf" class="action.a1.DeptListAction" method="showlist">
+			<result name="success">/a1/deptInf.jsp</result>			
+			<result name="error">../error.jsp</result> 
+		</action>
+		
+	 	<action name="userInf" class="action.a1.UserListAction" method="showlist">
+			<result name="success">/a1/userInf.jsp</result>
+			<result name="error">../error.jsp</result> 
+		</action> 
+		
+		
+		<action name="dept"  class="action.a1.DeptAction" >
+			<result name="update">/a1/detailDept.jsp</result> 		
+			<result name="success">/a1/zenjiabumenSuccess.jsp</result> 		
+			 <result name="error">/error.jsp</result> 
+			 <result name="deletesuccess">/a1/deletesuccess.jsp</result> 
+			 <result name="addsuccess">/a1/addsuccess.jsp</result> 
+		</action>
+		
+		<action name="empInf" class="action.a1.EmpAction">
+			
+			<result name="addsuccess">/a1/addEmpSuccess.jsp</result>		
+			<result name="add1">/a1/updatesuccess.jsp</result>		
+			<result name="load">/a1/xiugaiEmp.jsp</result>	
+			<result name="load4">/a1/changeuser.jsp</result>	
+			<result name="update1">/a1/updatesuccess.jsp</result>		
+		    <result name="delete">/a1/deletesuccess.jsp</result>	 
+			 <result name="error">/error.jsp</result> 
+		</action>
+
+		<action name="userInf1" class="action.a1.UserAction">
+			<result name="update">/a1/updatesuccess.jsp</result>	
+			<result name="load">/a1/changeuser.jsp</result>	
+			 <result name="delete">/a1/deletesuccess.jsp</result> 
+			 <result name="error">/error.jsp</result> 
+		</action>
+
+
+
+
+		<action name="user" class="action.a1.UserAction">
+			<result name="list" type="redirectAction">
+				list
+			</result>
+			 <result name="error">../error.jsp</result> 
+			 <result name="password_error">/a1/addUser.jsp</result>
+		</action>
+		<action name="list"  method="showlist"
+			class="action.a1.UserListAction">
+			<param name="pageSize">5</param>
+			<result name="success">/a1/addsuccess.jsp</result>
+			 <result name="error">/error.jsp</result> 
+		</action>
+	</package>
+</struts>
+
+	

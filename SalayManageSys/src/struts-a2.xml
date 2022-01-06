@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="a2" extends="employee-default">
+	
+		<action name="salaryStandardList" class="action.a2.StandardListAction">
+			<param name="pageSize">20</param>
+			<result name="success">/a2/setSalayStandar.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="setSalaryStandard" class="action.a2.StandardAction">
+			<param name="pageSize">20</param>
+			<result name="success">/a2/addSuccessful.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="buildchuqin" class="action.a2.AttendenceList"  method="showlist" >
+			<result name="success">/a2/buildChuqin.jsp</result>
+			<result name="error">/error.jsp</result>		
+		</action>
+		<action name="buildjiangjin" class="action.a2.AttendenceListAction" method="showlist">
+			<result name="success">/a2/buildJiangjin.jsp</result>
+			<result name="error">/error.jsp</result>		
+		</action>
+		<action name="jiangfamingxi" class="action.a2.AttendenceSetAction"  method="load">
+			<result name="success">/a2/jiangfamingxi.jsp</result>
+			<result name="error">/error.jsp</result>		
+		</action>
+		<action name="chuqin" class="action.a2.FindAt" method="showlistInf" >
+			<param name="pageSize">20</param> 
+			<result name="success">/a2/showAttendence.jsp</result>
+			<result name="error">/error.jsp</result>		
+		</action>
+		<action name="chuq" class="action.a2.FindAt" method="showlist" >
+			<param name="pageSize">20</param> 
+			<result name="success">/a2/showAttendenceInf.jsp</result>
+			<result name="error">/error.jsp</result>		
+		</action>
+		
+		<action name="yeji" class="action.a2.SalaryListAction"  method="showlist">
+			<param name="pageSize">50</param>
+			<result name="showlist">/a2/attendenceSet.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="salary1" class="action.a2.SalaryAction">
+			<result name="load">/a2/xiugaiYeji.jsp</result>
+			<result name="list">/a4/xiugaiSuccess.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="attendence1" class="action.a2.AttendenceAction">
+			<result name="update">/a2/xiugaiAttendence.jsp</result>
+			<!-- <result name="load1">/a2/xiugai.jsp</result> -->
+			<result name="loadatt">/a2/xiugai.jsp</result>
+			 <result name="list" >/a2/xiugaiSuccess.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		
+		<action name="attendenceSet1" class="action.a2.AttendenceSetAction">
+			<result name="message">/a2/attendenceSet.jsp</result>
+			<result name="messageInf">/a2/jiangfamingxi.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		
+		<action name="salaryStandardTwo" class="action.a2.StandardAction">
+			<result name="loadsuccess">/a2/detailStandard.jsp</result>
+			<result name="delete">/a2/deleteSuccess.jsp</result>
+			<result name="updatetwosuccess">/a2/xiugaiSuccess.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="salaryListInf" class="action.a2.SalaryListAction" method="showlist1">
+			<param name="pageSize">20</param>
+			<result name="success">/a2/showSalary.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+	
+		
+		<action name="gusuanSalary" class="action.a2.SalaryListAction" method="showlist1">
+			<param name="pageSize">20</param>
+			<result name="success">/a2/gusuanSalary.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		<action name="addSalary" class="action.a2.SalaryAction" method="add">
+			<param name="pageSize">20</param>
+			<result name="success">/a2/gusuanSalary.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+
+		
+	</package>
+</struts>
+
+	

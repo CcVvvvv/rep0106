@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="a5" extends="employee-default">
+			
+		<action name="findMeSalary" class="action.a5.FindMeSalary" method="showlist">
+			<param name="pageSize">20</param>
+			<result name="success">/a5/showSalary.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="emp" class="action.a5.EmpAction" method="load2">
+			<result name="update2">/a5/setPersInf.jsp</result>
+			<result name="update">/a5/xiugaiSuccess.jsp</result>
+			<result name="load">/a5/xiugaiInf.jsp</result>
+			 <result name="error">/error.jsp</result> 
+		</action>
+		
+	<!-- 	<action name="empadd" class="action.a5.EmpAction" method="update">
+			<result name="list">/a5/setPerson.jsp</result>
+			 <result name="error">/error.jsp</result> 
+		</action> -->
+		
+		<action name="updatePassword" class="action.a5.UpdatePasswordAction">
+			<result name="success">/a5/successful.jsp</result>
+			 <result name="password_error">/a5/updatePassword.jsp</result>
+			  <result name="newPassword_error">/a5/updatePassword.jsp</result>
+		</action>
+		
+		
+	</package>
+</struts>
+
+	

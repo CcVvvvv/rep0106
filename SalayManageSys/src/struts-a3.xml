@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<package name="a3" extends="employee-default">
+	
+	
+		<action	name="readSalary" method="showlist" class="action.a3.SalaryListAction">
+			<param name="pageSize">20</param>
+			<result name="success">/a3/showDept.jsp</result>
+			 <result name="error">/error.jsp</result> 
+		</action>
+		
+		<action	name="findDept" method="findDept" 
+				class="action.a3.FindDeptAction">
+			<param name="pageSize">5</param>
+			<result name="find">/a3/showDept.jsp</result>
+			 <result name="error">/error.jsp</result> 
+		</action>
+	
+		<!-- '' -->
+		<action name="salaryList" class="action.a3.SalaryListAction" method="showlist">
+			<param name="pageSize">20</param>
+			<result name="success">/a3/showSalary.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+		<action name="salaryList1" class="action.a3.SalaryListAction" method="showlist">
+			<param name="pageSize">20</param>
+			<result name="success">/a3/showDept.jsp</result>
+			<result name="error">/error.jsp</result>
+		</action>
+		
+	</package>
+</struts>
+
+	
